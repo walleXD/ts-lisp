@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "target": "es2015",
+    "module": "commonjs",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
+}
