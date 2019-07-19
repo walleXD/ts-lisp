@@ -1,9 +1,25 @@
-import lexer from '../lexer'
+import { generateRawTokens } from '../lexer'
 
-describe('basic', (): void => {
-  const basicProgram = `(ADD 1 2)`
-
+describe('generate raw tokens', (): void => {
   it('handle input', (): void => {
-    expect(lexer(basicProgram)).toEqual(['ADD', '1', '2'])
+    const basicProgram = `(ADD 1 2)`
+
+    expect(generateRawTokens(basicProgram)).toEqual([
+      '(',
+      'ADD',
+      '1',
+      '2',
+      ')'
+    ])
+  })
+
+  it('handle strings', (): void => {
+    const basicProgram = `("hello world")`
+
+    expect(generateRawTokens(basicProgram)).toEqual([
+      '(',
+      'hello world',
+      ')'
+    ])
   })
 })
