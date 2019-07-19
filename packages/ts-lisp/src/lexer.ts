@@ -48,7 +48,7 @@ export interface Token {
 /**
  * Generates token for numeric atoms
  * @param rawToken
- * @returns {Token} token for numeric atom
+ * @returns token for numeric atom
  */
 const tokenizeNum = (rawToken: string): Token => ({
   size: rawToken.length,
@@ -59,7 +59,7 @@ const tokenizeNum = (rawToken: string): Token => ({
 /**
  * Generates token for parenthesis atoms
  * @param rawToken Raw string token
- * @returns {Token} token for literal atom
+ * @returns token for literal atom
  */
 const tokenizeParen = (rawToken: string): Token => ({
   size: 1,
@@ -73,7 +73,7 @@ const tokenizeParen = (rawToken: string): Token => ({
 /**
  * Generates token for string atoms
  * @param rawToken Raw string token
- * @returns {Token} token for string atom
+ * @returns token for string atom
  */
 const tokenizeString = (rawToken: string): Token => ({
   size: rawToken.length,
@@ -84,7 +84,7 @@ const tokenizeString = (rawToken: string): Token => ({
 /**
  * Generates token for literal atoms
  * @param rawToken Raw string token
- * @returns {Token} token for literal atom
+ * @returns token for literal atom
  */
 const tokenizeLiteral = (rawToken: string): Token => ({
   size: rawToken.length,
@@ -94,8 +94,8 @@ const tokenizeLiteral = (rawToken: string): Token => ({
 
 /**
  * Takes a string token and then return appropriate token
- * @param {string} rawToken Raw string token
- * @returns {Token} Appropriate token based the given raw token
+ * @param rawToken Raw string token
+ * @returns Appropriate token based the given raw token
  */
 export const tokenize = (rawToken: string): Token => {
   if (Number(rawToken)) return tokenizeNum(rawToken)
@@ -110,17 +110,17 @@ export const tokenize = (rawToken: string): Token => {
 
 /**
  * Generates an array of Tokens
- * @param {string[]} rawTokens Array of raw tokens
- * @returns {Token[]} Array of Token
+ * @param rawTokens Array of raw tokens
+ * @returns Array of Token
  */
 export const generateTokens = (
   rawTokens: string[]
 ): Token[] => rawTokens.map(tokenize)
 
 /**
- * Generate tokens from a program
- * @param {string} program Takes LISP program as a string
- * @returns {Token[]} Array of Token generated from LISP program
+ * Generate tokens for a given LISP program
+ * @param program Takes LISP program as a string
+ * @returns Array of Token generated from LISP program
  */
 export default (program: string): Token[] =>
   pipe(
