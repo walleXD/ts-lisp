@@ -1,3 +1,3 @@
-import lexer from './lexer'
+import getTokens from './lexer'
 
-lexer('')
+console.log(getTokens('(ADD 1 2)'))

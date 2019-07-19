@@ -1,3 +1,5 @@
+import { pipe } from 'lodash/fp'
+
 /**
  * Takes a lisp program as string and returns array of raw token strings
  * @param {string} program
@@ -113,3 +115,14 @@ export const tokenize = (rawToken: string): Token => {
 export const generateTokens = (
   rawTokens: string[]
 ): Token[] => rawTokens.map(tokenize)
+
+/**
+ * Generate tokens from a program
+ * @param {string} program Takes LISP program as a string
+ * @returns {Token[]} Array of Token generated from LISP program
+ */
+export default (program: string): Token[] =>
+  pipe(
+    generateRawTokens,
+    generateTokens
+  )(program)
