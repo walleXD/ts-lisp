@@ -1,7 +1,7 @@
 import parse, {
   addNode,
   BinaryTreeNode,
-  emptyNode
+  createNode
 } from '../parser'
 import getTokens, { TokenTypes } from '../lexer'
 
@@ -17,12 +17,14 @@ describe('parser', (): void => {
       }
 
       const testNode: BinaryTreeNode = {
-        ...emptyNode,
-        right: emptyNode,
+        ...createNode(),
+        right: createNode(),
         left: newNode
       }
 
-      expect(addNode(emptyNode, newNode)).toEqual(testNode)
+      expect(addNode(newNode, createNode())).toEqual(
+        testNode
+      )
     })
   })
 
