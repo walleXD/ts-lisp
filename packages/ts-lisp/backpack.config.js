@@ -18,6 +18,13 @@ module.exports = {
       }
     })
 
+    config.module.rules.unshift({
+      enforce: 'pre',
+      test: /\.ts$/,
+      exclude: /node_modules/,
+      loader: 'eslint-loader'
+    })
+
     config.plugins.push(new ForkTsCheckerWebpackPlugin())
 
     return config

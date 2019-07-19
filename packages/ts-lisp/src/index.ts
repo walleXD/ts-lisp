@@ -1,3 +1,3 @@
-import parse from './parser'
+import lexer from './lexer'
 
-parse()
+lexer('')

@@ -18,5 +18,8 @@
   },
   "[typescriptreact]": {
     "editor.formatOnSave": false
-  }
+  },
+  "jest.autoEnable": true,
+  "jest.runAllTestsFirst": true,
+  "jest.enableCodeLens": false
 }
