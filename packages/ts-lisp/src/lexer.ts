@@ -2,8 +2,8 @@ import { pipe } from 'lodash/fp'
 
 /**
  * Takes a lisp program as string and returns array of raw token strings
- * @param {string} program
- * @returns {string[]} array of token strings
+ * @param program
+ * @returns array of token strings
  */
 export const generateRawTokens = (
   program: string
