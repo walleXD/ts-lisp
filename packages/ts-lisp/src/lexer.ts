@@ -31,7 +31,8 @@ export enum TokenTypes {
   NUMERIC_ATOM,
   LITERAL_ATOM,
   STRING_ATOM,
-  ERROR
+  ERROR,
+  EMPTY
 }
 
 /**
@@ -40,7 +41,7 @@ export enum TokenTypes {
  */
 export interface Token {
   type: TokenTypes
-  value: string | number
+  value: string | number | null
   size: number
 }
 
