@@ -18,7 +18,7 @@ export const generateRawTokens = (
     .join(' ')
     .trim()
     .split(' ')
-    .map((val): string => val.replace(/!whitespace!/, ' '))
+    .map((val): string => val.replace(/!whitespace!/g, ' '))
     .filter((val): boolean => val != '')
 
 /**

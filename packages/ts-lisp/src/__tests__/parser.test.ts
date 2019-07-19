@@ -3,7 +3,7 @@ import parse, {
   BinaryTreeNode,
   createNode
 } from '../parser'
-import getTokens, { TokenTypes } from '../lexer'
+import getTokens, { TokenTypes, tokenize } from '../lexer'
 
 describe('parser', (): void => {
   describe('binary tree', (): void => {
@@ -29,11 +29,30 @@ describe('parser', (): void => {
   })
 
   describe('parsing', (): void => {
-    it('parse atoms', (): void => {
-      const program = '2'
-      let tokens = getTokens(program)
+    describe('only atoms', (): void => {
+      it('numeric', (): void => {
+        const program = '2'
+        const tokens = getTokens(program)
+        const bTree = parse(tokens)
 
-      const bTree = parse(tokens)
+        expect(bTree).toEqual(createNode(tokenize(program)))
+      })
+
+      it('literal', (): void => {
+        const program = 'ADD'
+        const tokens = getTokens(program)
+        const bTree = parse(tokens)
+
+        expect(bTree).toEqual(createNode(tokenize(program)))
+      })
+
+      it('string', (): void => {
+        const program = '"Life is Good"'
+        const tokens = getTokens(program)
+        const bTree = parse(tokens)
+
+        expect(bTree).toEqual(createNode(tokenize(program)))
+      })
     })
   })
 })

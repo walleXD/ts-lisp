@@ -69,9 +69,17 @@ export const parseAtom = (
  * @param tokens Tokens generated during lexing
  * @param node Root node to which newly generated nodes are attached to recursively
  */
-export default (
+const parse = (
   tokens: Token[],
   node = createNode()
 ): BinaryTreeNode => {
+  if (
+    tokens[0].type === TokenTypes.LITERAL_ATOM ||
+    tokens[0].type === TokenTypes.NUMERIC_ATOM ||
+    tokens[0].type === TokenTypes.STRING_ATOM
+  )
+    return parseAtom(tokens[0], tokens, node)
   return node
 }
+
+export default parse
