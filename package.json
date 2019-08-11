@@ -1,7 +1,28 @@
 {
-  "name": "root",
+  "name": "@ts-lisp/root",
   "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "test": "jest"
+  },
   "devDependencies": {
-    "lerna": "^3.16.4"
-  }
+    "@types/jest": "^24.0.17",
+    "@types/lodash": "^4.14.136",
+    "@types/node": "^10.6.2",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "lerna": "^3.16.4",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.2",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "^3.5.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

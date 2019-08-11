@@ -1,0 +1,14 @@
+{
+  "name": "@ts-lisp/core",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "",
+    "test": "jest",
+    "build": "tsc",
+    "clean": "rimraf build lib"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
