@@ -1,5 +1,5 @@
 module.exports = {
-  roots: ['<rootDir>/src'],
+  // roots: ['<rootDir>/src'],
   transform: {
     '^.+\\.ts$': 'ts-jest'
   },
@@ -12,7 +12,6 @@ module.exports = {
     'json',
     'node'
   ],
-  collectCoverage: true,
   coveragePathIgnorePatterns: [
     '(tests/.*.mock).(jsx?|tsx?)$'
   ],

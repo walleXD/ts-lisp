@@ -30,6 +30,7 @@
     },
     "jest.autoEnable": true,
     "jest.runAllTestsFirst": true,
-    "jest.enableCodeLens": false
+    "jest.enableCodeLens": false,
+    "jest.debugMode": true
   }
 }
