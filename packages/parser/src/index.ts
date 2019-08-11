@@ -11,11 +11,11 @@ export interface BinaryTreeNode {
 }
 
 /**
- * Creates a new [{BinaryTreeNode}] with the given @param or with [{TokenTypes.EMPTY}] token
+ * Creates a new `BinaryTreeNode` with the given @param or with `TokenTypes.EMPTY` token
  * @param token Token to generate the node with. If not provided, empty token is used to generate the node
  * @param left Left node to be added to the new node
  * @param right Right node to be added to the new node
- * @returns New [{BinaryTreeNode}] created using the passed or empty [{Token}]
+ * @returns New `BinaryTreeNode` created using the passed or empty `Token`
  */
 export const createNode = (
   token: Token = {
@@ -32,7 +32,7 @@ export const createNode = (
 })
 
 /**
- * Adds a [{BinaryTreeNode}] to the left of a given [{BinaryTreeNode}]
+ * Adds a `BinaryTreeNode` to the left of a given `BinaryTreeNode`
  * @param newNode Node to attach
  * @param rootNode Node to which given node will be attached
  * @returns Root node with the given node attached
