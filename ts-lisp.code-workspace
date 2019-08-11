@@ -5,6 +5,12 @@
     },
     {
       "path": "packages/core"
+    },
+    {
+      "path": "packages/parser"
+    },
+    {
+      "path": "packages/lexer"
     }
   ],
   "settings": {

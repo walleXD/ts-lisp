@@ -13,8 +13,9 @@
     "rootDir": "src"
   },
   "references": [
-    { "path": "../parser" },
-    { "path": "../lexer" }
+    {
+      "path": "../lexer"
+    }
   ],
   "exclude": [
     "node_modules",

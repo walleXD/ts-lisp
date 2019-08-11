@@ -1,4 +1,4 @@
-import { Token, TokenTypes } from './lexer'
+import { Token, TokenTypes } from '@ts-lisp/lexer'
 
 /**
  * Interface for binary tree nodes representing s-expression

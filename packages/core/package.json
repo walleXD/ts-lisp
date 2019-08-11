@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "dev": "",
     "test": "jest",
-    "build": "tsc",
+    "build": "tsc -b",
+    "dev": "yarn build -w",
     "clean": "rimraf build lib"
   },
   "dependencies": {
+    "@ts-lisp/lexer": "*",
+    "@ts-lisp/parser": "*",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
     "jest": "^24.8.0",
-    "ts-jest": "^24.0.2"
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
   }
 }

@@ -4,7 +4,7 @@ import {
   tokenize,
   TokenTypes,
   Token
-} from '../lexer'
+} from '../index'
 
 describe('lexer', (): void => {
   describe('raw tokens', (): void => {

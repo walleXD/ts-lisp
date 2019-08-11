@@ -2,8 +2,11 @@ import parse, {
   addNode,
   BinaryTreeNode,
   createNode
-} from '../parser'
-import getTokens, { TokenTypes, tokenize } from '../lexer'
+} from '../index'
+import getTokens, {
+  TokenTypes,
+  tokenize
+} from '@ts-lisp/lexer'
 
 describe('parser', (): void => {
   describe('binary tree', (): void => {

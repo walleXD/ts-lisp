@@ -4,18 +4,15 @@
     "lib": ["esnext"],
     "module": "commonjs",
     "target": "es2019",
+    "rootDir": "src",
     "outDir": "lib",
     "sourceMap": true,
     "isolatedModules": false,
     "declaration": true,
     "composite": true,
-    "declarationMap": true,
-    "rootDir": "src"
+    "declarationMap": true
   },
-  "references": [
-    { "path": "../parser" },
-    { "path": "../lexer" }
-  ],
+  "references": [],
   "exclude": [
     "node_modules",
     "lib",
